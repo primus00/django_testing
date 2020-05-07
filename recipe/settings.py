@@ -91,13 +91,13 @@ WSGI_APPLICATION = 'recipe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # for heroku
-DATABASES['default'] = dj_database_url.parse("postgres://dkwxwwwbexxwhw:13e5c50158b30379f11bfb9034ecb50474ba35045e8fdde7080eaec23d87b4fc@ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d6ocvjv3moeqv5")
+DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
