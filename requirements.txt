@@ -8,3 +8,4 @@ Markdown==3.2.1
 gunicorn
 django-rest-swagger
 whitenoise
+django-heroku
