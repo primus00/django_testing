@@ -9,3 +9,4 @@ gunicorn
 django-rest-swagger
 whitenoise
 django-heroku
+dj_database_url
