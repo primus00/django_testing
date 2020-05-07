@@ -6,6 +6,5 @@ django-rest-auth==0.9.5
 djangorestframework==3.11.0
 Markdown==3.2.1
 gunicorn
-whitenoise
 django-heroku
 dj_database_url
