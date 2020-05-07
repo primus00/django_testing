@@ -1,0 +1,47 @@
+name: TESTING PR
+
+on: pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Pyflakes Syntax Checker
+      uses: lgeiger/pyflakes-action@v1.0.1
+      
+    - name: Run Tests
+      run: |
+        python manage.py test
+        
+    - name: Delete merged branch
+      uses: SvanBoxel/delete-merged-branch@v1.3.3
+      
+    - name: PR label by Files
+      uses: Decathlon/pull-request-labeler-action@v2.0.0
+      
+    - name: todo-actions
+      uses: dtinth/todo-actions@v0.2.0
+      
+    - name: Hercules
+      uses: src-d/hercules@master
+      
+    - uses: actions/upload-artifact@master
+      with:
+        name: hercules_charts
+        path: hercules_charts.tar
