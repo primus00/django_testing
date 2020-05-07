@@ -7,3 +7,4 @@ djangorestframework==3.11.0
 Markdown==3.2.1
 gunicorn
 django-rest-swagger
+whitenoise
