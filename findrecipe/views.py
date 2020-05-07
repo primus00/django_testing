@@ -4,11 +4,8 @@ from rest_framework.permissions import BasePermission, IsAuthenticated, SAFE_MET
 from rest_framework.parsers import JSONParser
 from .models import Recipe, Ingredient
 from .serializer import RecipeSerializer, RecipeDetailSerializer
-from rest_framework_swagger.views import get_swagger_view
 
 from itertools import chain
-
-schema_view = get_swagger_view(title='Pastebin API')
 
 @api_view(['GET', 'POST'])
 def search(request):
