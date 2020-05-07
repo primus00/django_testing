@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.7]
 
     steps:
     - uses: actions/checkout@v2
@@ -28,13 +28,7 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
-        
-    - name: Delete merged branch
-      uses: SvanBoxel/delete-merged-branch@v1.3.3
-      
-    - name: PR label by Files
-      uses: Decathlon/pull-request-labeler-action@v2.0.0
-      
+
     - name: todo-actions
       uses: dtinth/todo-actions@v0.2.0
       
