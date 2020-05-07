@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
@@ -32,10 +32,3 @@ jobs:
       run: |
         python manage.py test
       
-    - name: Hercules
-      uses: src-d/hercules@master
-      
-    - uses: actions/upload-artifact@master
-      with:
-        name: hercules_charts
-        path: hercules_charts.tar
