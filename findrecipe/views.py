@@ -1,8 +1,6 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from rest_framework.permissions import BasePermission, IsAuthenticated, SAFE_METHODS
-from rest_framework.parsers import JSONParser
-from .models import Recipe, Ingredient
+from .models import Recipe
 from .serializer import RecipeSerializer, RecipeDetailSerializer
 
 from itertools import chain
