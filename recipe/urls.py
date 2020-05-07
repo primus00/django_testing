@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='API')
@@ -26,3 +27,5 @@ urlpatterns = [
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls'))
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.STATIC_ROOT)
