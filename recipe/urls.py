@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.generic import RedirectView
 
 
 urlpatterns = [
+    path('home/', include('findrecipe.urls')),
+    path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('findrecipe.urls')),
-    path('rest-auth/', include('rest_auth.urls')),
-    path('rest-auth/registration/', include('rest_auth.registration.urls'))
+    path('favicon.ico/', RedirectView.as_view(url='/static/icons/favicon.ico')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
