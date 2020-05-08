@@ -33,6 +33,8 @@ jobs:
       
     - name: Run Tests
       run: |
+        export TESTING=1
+        python manage.py migrate
         python manage.py test
         
     - name: Deploy to Heroku
