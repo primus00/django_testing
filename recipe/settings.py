@@ -39,17 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'rest_framework',
     'corsheaders',
 
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
-    'rest_framework.authtoken',
 
-    'findrecipe'
+    'findrecipe',
+    'api'
 ]
 
 SITE_ID = 1
@@ -91,13 +88,13 @@ WSGI_APPLICATION = 'recipe.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # for heroku
-DATABASES['default'] = dj_database_url.config()
+# DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation

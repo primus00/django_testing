@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 from rest_framework.decorators import api_view
 from .models import Recipe
 from .serializer import RecipeSerializer, RecipeDetailSerializer
@@ -31,3 +32,7 @@ def get(request):
         else:
             final_search_result = []
             return JsonResponse(final_search_result)
+
+def home(request):
+
+    return render(request, 'home.html', {})
