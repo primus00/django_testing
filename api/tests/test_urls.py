@@ -16,7 +16,7 @@ class YourTestClass(TestCase):
         self.assertTrue(False)
 
 
-class YourTestClass(TestCase):
+class YourTestClass2(TestCase):
     @classmethod
     def setUpTestData(cls):
         print("setUpTestData: Run once to set up non-modified data for all class methods.")
