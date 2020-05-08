@@ -2,7 +2,7 @@ name: TESTING PR
 
 on:
   pull_request:
-    branches: [ deploy ]
+    branches: [ develop ]
 
 jobs:
   build:
