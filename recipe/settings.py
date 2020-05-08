@@ -96,8 +96,6 @@ DATABASES = {
 # for heroku
 DATABASES['default'] = dj_database_url.config()
 
-print(os.environ.get("DATABASE_URL"))
-print(DATABASES)
 
 
 # Password validation
