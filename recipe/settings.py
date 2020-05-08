@@ -94,7 +94,10 @@ DATABASES = {
 }
 
 # for heroku
-DATABASES['default'] = dj_database_url.config()
+TESTING = os.environ.get("TESTING")
+if not TESTING:
+    print("hello")
+    DATABASES['default'] = dj_database_url.config()
 
 
 

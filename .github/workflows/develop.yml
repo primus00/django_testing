@@ -32,7 +32,7 @@ jobs:
       
     - name: Run Tests
       run: |
-        export DATABASE_URL=${{ secrets.HEROKU_DATABASE }}
+        export TESTING=1
         python manage.py migrate
         python manage.py test
       

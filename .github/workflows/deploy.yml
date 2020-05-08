@@ -33,8 +33,6 @@ jobs:
       
     - name: Run Tests
       run: |
-        export DATABASE_URL=${{ secrets.HEROKU_DATABASE }}
-        python manage.py migrate
         python manage.py test
         
     - name: Deploy to Heroku
