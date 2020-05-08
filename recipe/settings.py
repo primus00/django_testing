@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 # for heroku
-# DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation

@@ -1,6 +1,3 @@
-from django.urls import path
-from rest_framework import routers
-
 from .router import CustomReadOnlyRouter
 from .views import UserViewSet, RandomViewSet
 
