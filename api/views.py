@@ -35,15 +35,7 @@ class RandomViewSet(viewsets.ViewSet):
         return Response(serializer.data)
     """
         @todo Add destroy action in api.views.RandomViewSet
-        @body There is a requirement of destroy action
-        @body * point 1
-        @body * point 2
-        @body ### Screenshots
-        @body ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK%26pid%3DApi&f=1) 
-        @body
-        @body ### Checklist
-        @body - [x] Done this
-        @body - [] do that
+        @body There is a requirement of destroy action <br> ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK%26pid%3DApi&f=1) 
     """
     def retrieve(self, request, pk=None):
         queryset = User.objects.all()
