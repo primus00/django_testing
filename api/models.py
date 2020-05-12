@@ -1,6 +1,15 @@
 from django.db import models
 
 # Create your models here.
+"""
+    @todo Add models api.models
+    @body There is a requirement of destroy action \\
+          ### is a requirement of destroy action \\ 
+          There is a requirement of destroy action \\
+          * is a requirement of destroy action \\
+          * is a requirement of destroy action \\ 
+          - [ ] is a requirement of destroy action \\
+"""
 
 class User(models.Model):
   name = models.CharField(max_length=100)
