@@ -28,6 +28,16 @@ class User2(models.Model):
   def __str__(self):
     return self.name
 
+"""
+    @todo Add models api.urls
+    @body There is a requirement of destroy action\
+    @body ### is a requirement of destroy action\ 
+    @body There is a requirement of destroy action\
+    @body * is a requirement of destroy action\
+    @body * is a requirement of destroy action\ 
+    @body - [ ] is a requirement of destroy action\
+"""
+
 class User3(models.Model):
   name = models.CharField(max_length=100)
   description= models.TextField(max_length=5000)
@@ -35,3 +45,4 @@ class User3(models.Model):
 
   def __str__(self):
     return self.name
+
