@@ -52,6 +52,10 @@ class RandomViewSet(viewsets.ViewSet):
     def partial_update(self, request, pk=None):
         pass
 
+    """
+        @todo Add update action in api.views.RandomViewSet
+        @body There is a requirement of destroy action <br> ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK%26pid%3DApi&f=1) 
+    """
     def destroy(self, request, pk=None):
         pass
 
