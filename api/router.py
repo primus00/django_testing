@@ -1,5 +1,10 @@
 from rest_framework.routers import Route, DynamicRoute, SimpleRouter
 
+"""
+    @todo Add new ApiConfig
+    @body There is a requirement of destroy action <br> ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK%26pid%3DApi&f=1) 
+"""
+
 class CustomReadOnlyRouter(SimpleRouter):
     """
     A router for read-only APIs, which doesn't use trailing slashes.
