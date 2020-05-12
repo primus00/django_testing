@@ -4,12 +4,12 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 Fixed [#issue](link)
 
-## Detailed Description [*not Compulsary]
+## Detailed Description [*not compulsory]
 
 ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK%26pid%3DApi&f=1)
 
-- [] point 1
-- [] point 2
+- [ ] point 1
+- [ ] point 2
 
 ---
 
